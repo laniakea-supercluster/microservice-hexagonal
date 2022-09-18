@@ -1,10 +1,13 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Inject } from '@nestjs/common';
 import { Domain } from '../../../application/domain/app.domain';
-import { AppService } from '../../../application/service/app.service';
+import { AppUseCase } from '../../../ports/usecase/app.usecase';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(
+    @Inject(AppUseCase)
+    private readonly appService: AppUseCase
+  ) {}
 
   @Get()
   getHello(): Domain {
