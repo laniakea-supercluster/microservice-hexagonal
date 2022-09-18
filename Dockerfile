@@ -5,17 +5,9 @@ WORKDIR /app
 COPY nest-cli.json package.json tsconfig.json tsconfig.build.json ./
 COPY src/ ./src
 
-RUN ls -la
-RUN ls -la src/
-
 RUN npm install \
-  && npm run build
-
-RUN ls -la 
-RUN rm -rf src/
-RUN ls -la 
-
-RUN ls -la dist/
+  && npm run build \
+  && rm -rf src/
 
 EXPOSE 3000
 
