@@ -1,3 +1,4 @@
+# GENERATE IMAGE: DOCKER_BUILDKIT=0 docker build -t techverso/microservice-hexagonal:v0.0.1 . 
 FROM node:17.0-alpine3.14
 
 WORKDIR /app
