@@ -1,8 +1,8 @@
 {
-  "name": "microservice-central",
+  "name": "microservice-hexagonal",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Microservice project example using hexagonal architecture",
+  "author": "Adriano Ferreira",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
